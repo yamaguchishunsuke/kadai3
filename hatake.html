@@ -48,6 +48,12 @@
 
       const axisHelper = new THREE.AxisHelper(400,50);
       scene.add(axisHelper);
+        
+        //地面
+        var material = new THREE.MeshBasicMaterial( {
+        map:THREE.ImageUtils.loadTexture('jimen.jpg', {}, function() {renderer.render(scene, camera);})
+      } );
+
 
         // カカシをスプライトで作成
         var textureLoader = new THREE.TextureLoader();  
