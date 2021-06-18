@@ -83,16 +83,27 @@
         sprite2.scale.set(50,100,50);
         scene.add(sprite2);
         
-         // 麦束をスプライトで作成 
+         // 麦束1をスプライトで作成 
         var texture3 = textureLoader.load("mugi2.png");
         const material3 = new THREE.SpriteMaterial({ map: texture3,});
 
         const sprite3 = new THREE.Sprite(material3);
-        sprite3.position.x = 150;
+        sprite3.position.x = 200;
         sprite3.position.y = 100;
-        sprite3.position.z = -250;
+        sprite3.position.z = 230;
         sprite3.scale.set(240,200,50);
         scene.add(sprite3);
+        
+         // 麦束2をスプライトで作成 
+        var texture4 = textureLoader.load("mugi2.png");
+        const material4 = new THREE.SpriteMaterial({ map: texture4,});
+
+        const sprite3 = new THREE.Sprite(material4);
+        sprite4.position.x = -160;
+        sprite4.position.y = 100;
+        sprite4.position.z = -90;
+        sprite4.scale.set(240,200,50);
+        scene.add(sprite4);
 
         tick();
         // 毎フレーム時に実行されるループイベントです
