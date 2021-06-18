@@ -53,6 +53,9 @@
         var material = new THREE.MeshBasicMaterial( {
         map:THREE.ImageUtils.loadTexture('jimen.jpg', {}, function() {renderer.render(scene, camera);})
       } );
+        var geometry = new THREE.PlaneGeometry(200, 200);
+      var mesh = new THREE.Mesh( geometry, material );
+
 
 
         // カカシをスプライトで作成
