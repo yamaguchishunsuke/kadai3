@@ -43,8 +43,7 @@
         scene.add(directionalLight2);
 
         // helper
-      const gridHelper = new THREE.GridHelper(500,50); // size, step
-      scene.add(gridHelper);
+
 
       const axisHelper = new THREE.AxisHelper(400,50);
       scene.add(axisHelper);
@@ -113,7 +112,7 @@
         var planeMaterial = new THREE.MeshPhongMaterial();
         planeMaterial.map = texture5;
         
-          var planeGeometry = new THREE.PlaneGeometry(400,400,50);
+          var planeGeometry = new THREE.PlaneGeometry(500,500,50);
           var plane = new THREE.Mesh(planeGeometry,planeMaterial);
           plane.rotation.set( -Math.PI/2, 0, 0 );
          plane.position.set(0,0,0);
