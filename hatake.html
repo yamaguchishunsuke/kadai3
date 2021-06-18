@@ -109,12 +109,14 @@
         scene.add(sprite4);
         
             // 平面を作成
-        var planematerials = new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("jimen.jpg")}),
-          var planeGeometry = new THREE.PlaneGeometry(5,5,5,5);
-          var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
+        var texture5 = textureLoader.load("jimen.jpg");
+        var planeMaterial = new THREE.MeshPhongMaterial();
+        planeMaterial.map = texture5;
+        
+          var planeGeometry = new THREE.PlaneGeometry(50,50,50);
           var plane = new THREE.Mesh(planeGeometry,planeMaterial);
           plane.rotation.set( -Math.PI/2, 0, 0 );
-         plane.position.set(0,-1,0);
+         plane.position.set(0,0,0);
         
         
 
