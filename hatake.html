@@ -112,6 +112,11 @@
         var planeMaterial = new THREE.MeshPhongMaterial();
         planeMaterial.map = texture5;
         
+         // バンプマップ読み込み
+  var bump = textureLoader.load("jimen-bump.jpg");
+  mat.bumpMap = bump;
+  mat.bumpscale = 0.2;
+        
         // 雑草1をスプライトで作成 
         var texture6 = textureLoader.load("kusa1.png");
         const material6 = new THREE.SpriteMaterial({ map: texture6,});
