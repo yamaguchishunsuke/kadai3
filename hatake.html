@@ -115,7 +115,7 @@
            // バンプマップ読み込み
        var bump = textureLoader.load("jimen-bump.jpg");
        planeMaterial.bumpMap = bump;
-       planeMaterial.bumpscale = 5;
+       planeMaterial.bumpscale = 0.8;
         
         var planeGeometry = new THREE.PlaneGeometry(500,500,50);
           var plane = new THREE.Mesh(planeGeometry,planeMaterial);
