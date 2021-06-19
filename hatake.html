@@ -134,6 +134,17 @@
         sprite7.scale.set(120,80,50);
         scene.add(sprite7);
         
+        // 麦束3をスプライトで作成 
+        var texture8 = textureLoader.load("mugi2.png");
+        const material8 = new THREE.SpriteMaterial({ map: texture8,});
+
+        const sprite8 = new THREE.Sprite(material8);
+        sprite8.position.x = 140;
+        sprite8.position.y = 100;
+        sprite8.position.z = -100;
+        sprite8.scale.set(240,200,50);
+        scene.add(sprite8);
+        
           var planeGeometry = new THREE.PlaneGeometry(500,500,50);
           var plane = new THREE.Mesh(planeGeometry,planeMaterial);
           plane.rotation.set( -Math.PI/2, 0, 0 );
