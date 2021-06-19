@@ -112,7 +112,7 @@
         var planeMaterial = new THREE.MeshPhongMaterial();
         planeMaterial.map = texture5;
         
-        // 雑草をスプライトで作成 
+        // 雑草1をスプライトで作成 
         var texture6 = textureLoader.load("kusa1.png");
         const material6 = new THREE.SpriteMaterial({ map: texture6,});
 
@@ -122,6 +122,17 @@
         sprite6.position.z = -100;
         sprite6.scale.set(120,80,50);
         scene.add(sprite6);
+        
+         // 雑草2をスプライトで作成 
+        var texture7 = textureLoader.load("kusa1.png");
+        const material7 = new THREE.SpriteMaterial({ map: texture7,});
+
+        const sprite7 = new THREE.Sprite(material7);
+        sprite7.position.x = 0;
+        sprite7.position.y = 45;
+        sprite7.position.z = 100;
+        sprite7.scale.set(120,80,50);
+        scene.add(sprite7);
         
           var planeGeometry = new THREE.PlaneGeometry(500,500,50);
           var plane = new THREE.Mesh(planeGeometry,planeMaterial);
