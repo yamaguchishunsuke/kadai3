@@ -107,10 +107,21 @@
         sprite4.scale.set(240,200,50);
         scene.add(sprite4);
         
-            // 平面を作成
+            // 地面を作成
         var texture5 = textureLoader.load("jimen.jpg");
         var planeMaterial = new THREE.MeshPhongMaterial();
         planeMaterial.map = texture5;
+        
+        // 麦束2をスプライトで作成 
+        var texture6 = textureLoader.load("kusa1.png");
+        const material6 = new THREE.SpriteMaterial({ map: texture6,});
+
+        const sprite6 = new THREE.Sprite(material6);
+        sprite6.position.x = 0;
+        sprite6.position.y = 100;
+        sprite6.position.z = 130;
+        sprite6.scale.set(240,200,50);
+        scene.add(sprite6);
         
           var planeGeometry = new THREE.PlaneGeometry(500,500,50);
           var plane = new THREE.Mesh(planeGeometry,planeMaterial);
