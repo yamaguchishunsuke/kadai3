@@ -112,10 +112,18 @@
         var planeMaterial = new THREE.MeshPhongMaterial();
         planeMaterial.map = texture5;
         
-         // バンプマップ読み込み
-  var bump = textureLoader.load("jimen-bump.jpg");
-  mat.bumpMap = bump;
-  mat.bumpscale = 0.2;
+           // バンプマップ読み込み
+       var bump = textureLoader.load("jimen-bump.jpg");
+       planeMaterial.bumpMap = bump;
+       planeMaterial.bumpscale = 0.2;
+        
+        var planeGeometry = new THREE.PlaneGeometry(500,500,50);
+          var plane = new THREE.Mesh(planeGeometry,planeMaterial);
+          plane.rotation.set( -Math.PI/2, 0, 0 );
+         plane.position.set(0,0,0);
+           scene.add(plane);
+        
+      
         
         // 雑草1をスプライトで作成 
         var texture6 = textureLoader.load("kusa1.png");
@@ -150,11 +158,7 @@
         sprite8.scale.set(240,200,50);
         scene.add(sprite8);
         
-          var planeGeometry = new THREE.PlaneGeometry(500,500,50);
-          var plane = new THREE.Mesh(planeGeometry,planeMaterial);
-          plane.rotation.set( -Math.PI/2, 0, 0 );
-         plane.position.set(0,0,0);
-           scene.add(plane);
+          
         
         
 
